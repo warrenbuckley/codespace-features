@@ -6,13 +6,6 @@
 # the error location in the running code
 set -e
 
-echo "Activating feature 'color'"
+echo "Activating SQLite featute"
 echo "The provided favorite color is: ${FAVORITE}"
 
-cat > /usr/local/bin/color \
-<< EOF
-#!/bin/sh
-echo "my favorite color is ${FAVORITE}"
-EOF
-
-chmod +x /usr/local/bin/color
