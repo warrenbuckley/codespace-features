@@ -15,6 +15,7 @@ jobs:
         features:
           - color
           - hello
+          - sqlite
         baseImage:
           - debian:latest
           - ubuntu:latest
