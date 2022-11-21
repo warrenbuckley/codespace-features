@@ -7,7 +7,7 @@ Installs SQLite into the devcontainer and uses the SQLite VSCode extension
 
 ```json
 "features": {
-    "ghcr.io/warrenbuckley/SQLite-Codespace-Feature/sqlite:1": {}
+    "ghcr.io/warrenbuckley/sqlite-codespace-feature/sqlite:1": {}
 }
 ```
 
@@ -17,4 +17,4 @@ Installs SQLite into the devcontainer and uses the SQLite VSCode extension
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/warrenbuckley/SQLite-Codespace-Feature/blob/main/src/sqlite/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/warrenbuckley/sqlite-codespace-feature/blob/main/src/sqlite/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
