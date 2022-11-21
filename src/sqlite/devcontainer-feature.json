@@ -2,5 +2,19 @@
     "name": "SQLite",
     "id": "sqlite",
     "version": "1.0.0",
-    "description": "Installs SQLite into the devcontainer"
+    "description": "Installs SQLite into the devcontainer and uses the SQLite VSCode extension",
+    "keywords": [
+        "SQLite",
+        "Database"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "alexcvzz.vscode-sqlite"
+            ]
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
 }
