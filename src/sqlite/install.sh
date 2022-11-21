@@ -6,6 +6,10 @@
 # the error location in the running code
 set -e
 
-echo "Activating SQLite featute"
-echo "The provided favorite color is: ${FAVORITE}"
+echo "Activating SQLite feature"
 
+echo "Running apt-get update..."
+apt-get update -y
+
+echo "Installing SQLite..."
+apt-get install -y sqlite3

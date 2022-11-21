@@ -2,17 +2,5 @@
     "name": "SQLite",
     "id": "sqlite",
     "version": "1.0.0",
-    "description": "Installs SQLite into the devcontainer",
-    "options": {
-        "favorite": {
-            "type": "string",
-            "enum": [
-                "red",
-                "gold",
-                "green"
-            ],
-            "default": "red",
-            "description": "Choose your favorite color."
-        }
-    }
+    "description": "Installs SQLite into the devcontainer"
 }
