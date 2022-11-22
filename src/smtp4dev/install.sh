@@ -11,7 +11,7 @@ echo "Activating SMTP4Dev feature"
 
 ################################################################################
 echo "Verifying dotnet is available"
-if ! type dotnet2 >/dev/null 2>&1; then
+if ! type dotnet >/dev/null 2>&1; then
   echo "ERROR: Use a base image with dotnet installed or add the feature to devcontainer.json as 'dotnet tool install' is needed
 
     "features": {
