@@ -1,0 +1,31 @@
+{
+    "name": "SMTP4Dev",
+    "id": "smtp4dev",
+    "version": "1.0.0",
+    "description": "Installs SMTP4Dev using 'dotnet tool install' into the devcontainer and maps the port",
+    "keywords": [
+        "smtp4dev",
+        "SMTP",
+        "Email",
+        "Test SMTP"
+    ],
+    "options":{
+        "webport": {
+            "description": "Port number for SMTP4Dev web UI",
+            "type": "string",
+            "proposals": ["5000"],
+            "default": "5000"
+        }
+    },
+    }
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "alexcvzz.vscode-sqlite"
+            ]
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
