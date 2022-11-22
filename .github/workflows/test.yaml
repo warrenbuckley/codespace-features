@@ -16,9 +16,6 @@ jobs:
           - sqlite
           - smtp4dev
         baseImage:
-          - debian:latest
-          - ubuntu:latest
-          - mcr.microsoft.com/devcontainers/base:ubuntu
           - mcr.microsoft.com/devcontainers/dotnet:0-7.0
     steps:
       - uses: actions/checkout@v3
