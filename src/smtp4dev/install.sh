@@ -23,15 +23,15 @@ fi
 
 ################################################################################
 echo "Installing SMTP4Dev as a dotnet global tool"
-dotnet tool install -g Rnwood.Smtp4dev
+dotnet tool install --tool-path /usr/local/dotnet-tools Rnwood.Smtp4dev 
 
 ################################################################################
 echo "Add dotnet tools to PATH"
 cat << \EOF >> ~/.bash_profile
 # Add .NET Core SDK tools
-export PATH="$PATH:/root/.dotnet/tools"
+export PATH="$PATH:/usr/local/dotnet-tools"
 EOF
 
 ################################################################################
 echo "Verify SMTP4Dev is installed"
-type smtp4dev
+dotnet tool list --tool-path /usr/local/dotnet-tools

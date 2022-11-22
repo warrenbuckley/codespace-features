@@ -1,7 +1,7 @@
 {
     "name": "SMTP4Dev: A dotnet test email SMTP server",
     "id": "smtp4dev",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "Installs SMTP4Dev using 'dotnet tool install' into the devcontainer and maps the port",
     "keywords": [
         "smtp4dev",
@@ -29,7 +29,7 @@
         }
     },
     "containerEnv": {
-        "PATH": "${PATH}:/root/.dotnet/tools"
+        "PATH": "/usr/local/dotnet-tools:${PATH}"
     },
     "entrypoint": "entrypoint.sh",
     "installsAfter": [

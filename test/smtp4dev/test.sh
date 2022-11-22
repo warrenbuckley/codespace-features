@@ -25,6 +25,7 @@ source dev-container-features-test-lib
 
 # Definition specific tests
 check "smtp4dev installed" type smtp4dev
+check "smtp4dev dotnet tool list" dotnet tool list --tool-path /usr/local/dotnet-tools
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
