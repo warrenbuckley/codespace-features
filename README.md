@@ -9,6 +9,6 @@ Installs SQLite into the devcontainer using `apt install sqlite3` and adds the [
 
 ```json
 "features": {
-    "ghcr.io/warrenbuckley/sqlite-codespace-feature/sqlite:1": {}
+  "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {}
 }
 ```
