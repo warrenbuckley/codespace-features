@@ -19,4 +19,4 @@ printenv
 
 ################################################################################
 echo "Run SMTP4Dev global tool"
-smtp4dev --smtpport=2525 --imapport=1444
+smtp4dev
