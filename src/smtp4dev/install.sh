@@ -35,3 +35,7 @@ EOF
 ################################################################################
 echo "Verify SMTP4Dev is installed"
 dotnet tool list --tool-path /usr/local/dotnet-tools
+
+################################################################################
+echo "Copy over the launch script"
+cp -f smtp4dev-entrypoint.sh /usr/local/share

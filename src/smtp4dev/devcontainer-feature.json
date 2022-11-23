@@ -31,9 +31,8 @@
     "containerEnv": {
         "PATH": "/usr/local/dotnet-tools:${PATH}"
     },
-    "entrypoint": "entrypoint.sh",
+    "entrypoint": "/usr/local/share/smtp4dev-entrypoint.sh",
     "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils",
-        "ghcr.io/devcontainers/features/dotnet"
+        "ghcr.io/devcontainers/features/common-utils"
     ]
 }
