@@ -14,6 +14,7 @@ echo "SMTP4DEV: SMTP Port: $SMTP4DEV_SMTPPORT"
 echo "SMTP4DEV: IMAP Port: $SMTP4DEV_IMAPPORT"
 
 ################################################################################
+echo "Print out ENV variables (Debug for options)"
 printenv
 
 ################################################################################
