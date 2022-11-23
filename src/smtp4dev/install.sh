@@ -9,7 +9,8 @@ set -e
 ################################################################################
 echo "Activating SMTP4Dev feature"
 
-# Variable to store path to dotnet tools
+# Variables
+AUTORUN=${AUTORUN:-"true"}
 DOTNET_TOOLS_DIR=${DOTNET_TOOLS_DIR:-"/usr/local/dotnet-tools"}
 
 
@@ -61,5 +62,13 @@ dotnet tool list --tool-path /usr/local/dotnet-tools
 
 
 ################################################################################
-echo "Copy over the launch script"
-cp -f smtp4dev-entrypoint.sh /usr/local/share
+
+# By default SMTP4Dev will autorun
+if [ "${AUTORUN}" = "true" ]; then
+
+  echo "Copy over the entrypoint launch script to autorun SMTP4Dev"
+  cp -f smtp4dev-entrypoint.sh /usr/local/share
+
+fi
+
+
