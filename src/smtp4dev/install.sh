@@ -45,25 +45,28 @@ usermod -a -G smtp4dev ${_REMOTE_USER}
 umask 0002
 
 chown -R "${_REMOTE_USER}:smtp4dev" ${DOTNET_TOOLS_DIR}
-find ${DOTNET_TOOLS_DIR} -type d -print0 | xargs -d '\n' -0 chmod g+s
+chmod -R g+r+w "${DOTNET_TOOLS_DIR}"
+find "${DOTNET_TOOLS_DIR}" -type d | xargs -n 1 chmod g+s
+
 
 
 ################################################################################
 echo "Add dotnet tools to PATH"
 cat << \EOF >> ~/.bash_profile
 # Add .NET Core SDK tools
-export PATH="$PATH:/usr/local/dotnet-tools"
+export PATH="$PATH:${DOTNET_TOOLS_DIR}"
 EOF
 
 
 ################################################################################
 echo "Verify SMTP4Dev is installed"
-dotnet tool list --tool-path /usr/local/dotnet-tools
+dotnet tool list --tool-path ${DOTNET_TOOLS_DIR}
 
 
 ################################################################################
 
-# By default SMTP4Dev will autorun
+# Check option to see if we should autorun SMTP4Dev
+# Default is true
 if [ "${AUTORUN}" = "true" ]; then
 
   echo "Copy over the entrypoint launch script to autorun SMTP4Dev"
