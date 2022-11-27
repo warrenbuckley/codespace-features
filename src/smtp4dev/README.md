@@ -16,9 +16,6 @@ Installs SMTP4Dev using 'dotnet tool install' into the devcontainer and maps the
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | autorun | Will autorun the SMTP4Dev server on startup | boolean | true |
-| webport | Port number for SMTP4Dev web UI | string | 5000 |
-| smtpport | Port number for SMTP4Dev SMTP port to listen on | string | 2525 |
-| imapport | Port number for SMTP4Dev IMAP port to listen on | string | 1443 |
 
 
 
