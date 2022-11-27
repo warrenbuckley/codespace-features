@@ -48,6 +48,10 @@ chown -R "${_REMOTE_USER}:smtp4dev" ${DOTNET_TOOLS_DIR}
 chmod -R g+r+w "${DOTNET_TOOLS_DIR}"
 find "${DOTNET_TOOLS_DIR}" -type d | xargs -n 1 chmod g+s
 
+# Trying something new...
+# https://www.geeksforgeeks.org/bind-port-number-less-1024-non-root-access/
+setcap CAP_NET_BIND_SERVICE=+eip ${DOTNET_TOOLS_DIR}/smtp4dev
+
 
 
 ################################################################################
