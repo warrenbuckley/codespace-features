@@ -12,3 +12,29 @@ Installs SQLite into the devcontainer using `apt install sqlite3` and adds the [
   "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {}
 }
 ```
+
+
+## SMTP4Dev: A dotnet test email SMTP server (smtp4dev)
+
+Installs SMTP4Dev using 'dotnet tool install' into the devcontainer and maps the port
+
+### Example Usage
+
+```json
+"features": {
+    "ghcr.io/warrenbuckley/codespace-features/smtp4dev:0": {}
+}
+```
+
+### Options
+
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| autorun | Will autorun the SMTP4Dev server on startup | boolean | true |
+
+
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/warrenbuckley/codespace-features/blob/main/src/smtp4dev/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+
