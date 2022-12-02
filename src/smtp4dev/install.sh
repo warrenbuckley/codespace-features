@@ -69,13 +69,36 @@ dotnet tool list --tool-path ${DOTNET_TOOLS_DIR}
 
 ################################################################################
 
-# Check option to see if we should autorun SMTP4Dev
-# Default is true
+# Create an entrypoint/init file
+# NOTE: It's inline here so we can use the variables/options
+# That the feature can set to pass onto the smtp4dev .NET tool
+echo "Creating entyrpoint launch script to autorun SMTP4Dev tool"
+
 if [ "${AUTORUN}" = "true" ]; then
 
-  echo "Copy over the entrypoint launch script to autorun SMTP4Dev"
-  cp -f smtp4dev-entrypoint.sh /usr/local/share
+# Create entrypoint file to auto-run SMTP4Dev with the desired ports
+cat <<-EOF > /usr/local/share/smtp4dev-entrypoint.sh
+export WEBPORT="${WEBPORT:-5000}"
+export SMTPPORT="${SMTPPORT:-25}"
+export IMAPPORT="${IMAPPORT:-143}"
+
+echo "SMTP4Dev Web Port ${WEBPORT}"
+echo "SMTP4Dev SMTP Port: ${SMTPPORT}"
+echo "SMTP4Dev IMAP Port: ${IMAPPORT}"
+
+echo "Run SMTP4Dev global tool"
+smtp4dev --smtpport ${SMTPPORT} --imapport ${IMAPPORT} --urls http://localhost:${WEBPORT}
+EOF
+
+else
+
+# Create entrypoint file that contains a simple message to run themselves
+cat <<-EOF > /usr/local/share/smtp4dev-entrypoint.sh
+#!/bin/bash
+# Print out friendly message that SMTP4Dev is in the path
+echo "SMTP4Dev is available in the path and you can run it with your desired configuration"
+echo "smtp4dev --help"
+EOF
 
 fi
-
 
