@@ -18,19 +18,19 @@
             "description": "Port number for SMTP4Dev web UI",
             "type": "string",
             "proposals": ["5000"],
-            "default": "9000"
+            "default": "5000"
         },
         "smtpport": {
             "description": "Port number for SMTP4Dev SMTP port to listen on",
             "type": "string",
             "proposals": ["25"],
-            "default": "2525"
+            "default": "25"
         },
         "imapport": {
             "description": "Port number for SMTP4Dev IMAP port to listen on",
             "type": "string",
             "proposals": ["143"],
-            "default": "144"
+            "default": "143"
         }
     },
     "containerEnv": {

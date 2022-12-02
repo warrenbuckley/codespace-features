@@ -102,3 +102,6 @@ EOF
 
 fi
 
+
+# Update permission of entrypoint file to be executable
+chmod +x /usr/local/share/smtp4dev-entrypoint.sh
