@@ -7,7 +7,7 @@ Installs SMTP4Dev using 'dotnet tool install' into the devcontainer and maps the
 
 ```json
 "features": {
-    "ghcr.io/warrenbuckley/codespace-features/smtp4dev:0": {}
+    "ghcr.io/warrenbuckley/codespace-features/smtp4dev:1": {}
 }
 ```
 
