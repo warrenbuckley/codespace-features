@@ -1,7 +1,7 @@
 {
     "name": "SMTP4Dev: A dotnet test email SMTP server",
     "id": "smtp4dev",
-    "version": "0.11.0",
+    "version": "1.0.0",
     "description": "Installs SMTP4Dev using 'dotnet tool install' into the devcontainer and maps the port",
     "keywords": [
         "smtp4dev",
